@@ -1,0 +1,53 @@
+Sepeda Cahaya gallery image sources
+
+Category photos (assets/css/img/kategori/):
+- mtb-bikepacking-unsplash.jpg — https://images.unsplash.com/photo-1511994298241-608e28f14fde?auto=format&fit=crop&w=1400&q=88
+- commuter-city-unsplash.jpg — https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&w=1400&q=88
+- racer-road-unsplash.jpg — https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=1400&q=88
+- folding-brompton-wikimedia.jpg — https://commons.wikimedia.org/wiki/File:Brompton1.jpeg (Copyrighted free use, attribution not required)
+
+The Unsplash images are covered by the Unsplash License: https://unsplash.com/license
+They are category illustrations, not photos of the named shop inventory.
+
+Product photos (assets/img/katalog/):
+All 22 bicycle cards and 14 spare-part cards use a different image. The images
+were prepared from photographs already present in this project (assets/img/ and
+assets/img/catalog-v3/) and from assets/img/produk/ for spare parts. Each file was
+trimmed of excess white margin, fitted to a 900 x 675 px (4:3) white canvas, and
+saved as WebP quality 90, so every card image has the same dimensions and visual
+scale. Original files were kept unchanged.
+
+Bicycle mapping:
+- MTB: Polygon Cascade 5, Polygon Xtrada 5, Polygon Premier 5, Pacific MTB 27.5,
+  United Miami 27.5, TRINX M136, TREK Marlin 5, Polygon Maze M20,
+  Pacific Invert Cadet 20, Polygon Maze M24, MTB Junior 20, MTB Junior 24.
+- Folding: Dahon Route 16, Dahon Route 20, United Stylo 16, Polygon Urbano 3 20".
+- Racer: Road Racer 700c, Racer Aero 700c, Racer Endurance 700c.
+- Commuter: Commuter City 26", Sepeda Harian Urban 700c, Commuter Family 24".
+
+The duplicate placeholder cards that reused one category photo (Road Bike Speed
+700c and City Bike Classic 26") and the duplicate Evergreen MTB 20 card were
+removed so that no image is shown for two different products. Photos remain
+references of the model type; colours, exact specifications, and stock should be
+confirmed with the shop.
+
+Spare parts:
+All 14 real reference photographs are stored in assets/img/produk/ and copied
+(normalised) to assets/img/katalog/. Per-file source pages, original image URLs,
+authors, licenses, modifications, and checksums are recorded in
+assets/img/produk/asset-sources.json.
+Wikimedia photographs retain their applicable CC BY-SA, CC0, or public-domain terms.
+The mirror photograph is from the official Decathlon Indonesia product page:
+https://www.decathlon.co.id/p/kaca-spion-sepeda-100-btwin-8158024.html
+Its reuse permission has not been confirmed and is not represented as Creative Commons.
+The visitor-facing kredit-foto.html attribution page is linked from the gallery.
+
+Prices:
+Card prices are market averages collected online in November 2026 from brand
+websites (United Bike, Decathlon Indonesia), a Polygon price article, and
+marketplace listings. Each product dialog shows the price range and a source link.
+Prices are estimates and must be confirmed with the shop before publishing.
+
+Inventory availability and model-specific specifications remain unconfirmed.
+The project owner should confirm rights to the original bicycle photos before
+public deployment.
