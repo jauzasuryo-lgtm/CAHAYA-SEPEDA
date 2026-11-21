@@ -181,6 +181,14 @@
     ];
     const catalogImage = slug => `assets/img/katalog/${slug}`;
     const referenceNote = 'Foto referensi model; warna dan stok dapat berbeda.';
+    const spareCategories = [
+      { id: 'transmisi', label: 'Transmisi', image: catalogImage('rantai-sepeda.webp') },
+      { id: 'ban-roda', label: 'Ban & Roda', image: catalogImage('ban-dalam.webp') },
+      { id: 'rem', label: 'Rem', image: catalogImage('kampas-rem.webp') },
+      { id: 'sadel-stang', label: 'Sadel & Stang', image: catalogImage('sadel-sepeda.webp') },
+      { id: 'pedal', label: 'Pedal', image: catalogImage('pedal-sepeda.webp') },
+      { id: 'lampu-aksesori', label: 'Lampu & Aksesori', image: catalogImage('lampu-depan.webp') }
+    ];
 
     const products = [
       { name: 'Polygon Cascade 5', category: 'mtb', price: null, age: 'Dewasa', image: catalogImage('polygon-cascade-5.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: bikeSpecs({ material: 'Aluminium AL6', fork: 'SR Suntour XCM, 100 mm', size: '27,5"', gears: '10 speed', groupset: 'Shimano CUES 1x10', brakes: 'Cakram hidrolik', tires: '27,5 x 2,10', weight: '±14,7 kg', age: 'Dewasa, 155–180 cm' }) },
@@ -208,22 +216,22 @@
     ];
 
     const spareParts = [
-      ['Rantai Sepeda 6–8 Speed', 'rantai-sepeda.webp', 'Rantai', '6–8 speed', 'Baru', 'Baja', '1/2" x 3/32"'],
-      ['Ban Luar 26 x 1.95', 'ban-luar.webp', 'Ban luar', '26 x 1.95', 'Baru', 'Karet', '26 x 1,95'],
-      ['Ban Dalam 26"', 'ban-dalam.webp', 'Ban dalam', '26 inci', 'Baru', 'Butyl', '26 x 1,75–2,125'],
-      ['Kampas Rem Shimano L05A', 'kampas-rem.webp', 'Rem', 'Shimano hidrolik', 'Baru', 'Resin + pelat baja', 'Shimano L05A'],
-      ['Sadel Sepeda City Comfort', 'sadel-sepeda.webp', 'Sadel', 'Universal', 'Baru', 'Sintetis + gel', '270 x 160 mm'],
-      ['Stang Sepeda MTB 31.8 mm', 'stang-sepeda.webp', 'Stang', 'Clamp 31,8 mm', 'Baru', 'Aluminium', '31,8 mm, 720 mm'],
-      ['Pedal Sepeda Fyxation', 'pedal-sepeda.webp', 'Pedal', '9/16 inci', 'Baru', 'Nylon komposit', '9/16 inci'],
-      ['Shifter Sepeda 8-Speed', 'shifter-sepeda.webp', 'Shifter', '8 speed', 'Baru', 'Aluminium/plastik', '8 speed'],
-      ['Gear Sepeda Shimano CS-HG51', 'cassette-gear.webp', 'Transmisi', '8 speed', 'Baru', 'Baja', '11–32T, 8 speed'],
-      ['Velg Sepeda 26" Alloy', 'velg-sepeda.webp', 'Roda', '26 inci', 'Baru', 'Aluminium', '26 inci, 32H'],
-      ['Lampu Depan USB Rechargeable', 'lampu-depan.webp', 'Lampu depan', 'Universal', 'Baru', 'Plastik/aluminium', 'USB rechargeable'],
-      ['Lampu Belakang Sigma Hiro', 'lampu-belakang.webp', 'Lampu belakang', 'Universal', 'Baru', 'Plastik', '2 x AAA'],
-      ['Bell Sepeda Rose Bikes', 'bel-sepeda.webp', 'Bell', 'Universal', 'Baru', 'Aluminium', '22,2 mm'],
-      ['Spion Sepeda BTWIN 100', 'spion-sepeda.webp', 'Spion', 'Universal', 'Baru', 'Plastik + kaca', '22,2 mm']
-    ].map(([name, file, type, compatible, condition, material, size]) => ({
-      name, category: 'spareparts', price: null, image: catalogImage(file),
+      ['Rantai Sepeda 6–8 Speed', 'rantai-sepeda.webp', 'Rantai', '6–8 speed', 'Baru', 'Baja', '1/2" x 3/32"', 'transmisi'],
+      ['Ban Luar 26 x 1.95', 'ban-luar.webp', 'Ban luar', '26 x 1.95', 'Baru', 'Karet', '26 x 1,95', 'ban-roda'],
+      ['Ban Dalam 26"', 'ban-dalam.webp', 'Ban dalam', '26 inci', 'Baru', 'Butyl', '26 x 1,75–2,125', 'ban-roda'],
+      ['Kampas Rem Shimano L05A', 'kampas-rem.webp', 'Rem', 'Shimano hidrolik', 'Baru', 'Resin + pelat baja', 'Shimano L05A', 'rem'],
+      ['Sadel Sepeda City Comfort', 'sadel-sepeda.webp', 'Sadel', 'Universal', 'Baru', 'Sintetis + gel', '270 x 160 mm', 'sadel-stang'],
+      ['Stang Sepeda MTB 31.8 mm', 'stang-sepeda.webp', 'Stang', 'Clamp 31,8 mm', 'Baru', 'Aluminium', '31,8 mm, 720 mm', 'sadel-stang'],
+      ['Pedal Sepeda Fyxation', 'pedal-sepeda.webp', 'Pedal', '9/16 inci', 'Baru', 'Nylon komposit', '9/16 inci', 'pedal'],
+      ['Shifter Sepeda 8-Speed', 'shifter-sepeda.webp', 'Shifter', '8 speed', 'Baru', 'Aluminium/plastik', '8 speed', 'transmisi'],
+      ['Gear Sepeda Shimano CS-HG51', 'cassette-gear.webp', 'Transmisi', '8 speed', 'Baru', 'Baja', '11–32T, 8 speed', 'transmisi'],
+      ['Velg Sepeda 26" Alloy', 'velg-sepeda.webp', 'Roda', '26 inci', 'Baru', 'Aluminium', '26 inci, 32H', 'ban-roda'],
+      ['Lampu Depan USB Rechargeable', 'lampu-depan.webp', 'Lampu depan', 'Universal', 'Baru', 'Plastik/aluminium', 'USB rechargeable', 'lampu-aksesori'],
+      ['Lampu Belakang Sigma Hiro', 'lampu-belakang.webp', 'Lampu belakang', 'Universal', 'Baru', 'Plastik', '2 x AAA', 'lampu-aksesori'],
+      ['Bell Sepeda Rose Bikes', 'bel-sepeda.webp', 'Bell', 'Universal', 'Baru', 'Aluminium', '22,2 mm', 'lampu-aksesori'],
+      ['Spion Sepeda BTWIN 100', 'spion-sepeda.webp', 'Spion', 'Universal', 'Baru', 'Plastik + kaca', '22,2 mm', 'lampu-aksesori']
+    ].map(([name, file, type, compatible, condition, material, size, spareCategory]) => ({
+      name, category: 'spareparts', spareCategory, price: null, image: catalogImage(file),
       isReference: true, imageNote: referenceNote, dateAdded: null, colors: [],
       meta: [{ label: 'JENIS', value: type }, { label: 'KOMPATIBEL', value: compatible }, { label: 'KONDISI', value: condition }],
       specs: [
@@ -396,9 +404,9 @@
       imagePreviewClose.focus({ preventScroll: true });
     }
 
-    function createCategoryCard(category) {
+    function createCategoryCard(category, columnClass = 'col-lg-3 col-md-6') {
       const column = document.createElement('div');
-      column.className = 'col-lg-3 col-md-6 category-column';
+      column.className = `${columnClass} category-column`;
 
       const button = document.createElement('button');
       button.type = 'button';
@@ -408,7 +416,7 @@
       const image = document.createElement('img');
       image.className = 'portfolio-category-image';
       image.src = category.image;
-      image.alt = `Kategori sepeda ${category.label}`;
+      image.alt = `Kategori ${category.label}`;
       image.loading = 'lazy';
       image.decoding = 'async';
       const label = document.createElement('span');
@@ -535,7 +543,10 @@
 
     function renderCategories() {
       categoryGrid.replaceChildren();
-      categories.forEach(category => categoryGrid.appendChild(createCategoryCard(category)));
+      const isSpare = activeMainTab === 'spareparts';
+      const list = isSpare ? spareCategories : categories;
+      const columnClass = isSpare ? 'col-lg-4 col-md-6' : 'col-lg-3 col-md-6';
+      list.forEach(category => categoryGrid.appendChild(createCategoryCard(category, columnClass)));
     }
 
     function renderAudienceChoices() {
@@ -557,30 +568,37 @@
     function renderProducts() {
       productGrid.querySelectorAll('.product-column').forEach(column => column.remove());
 
-      const showCategories = activeMainTab === 'bikes' && !selectedCategory;
-      const showCategoryFlow = activeMainTab === 'bikes' && Boolean(selectedCategory);
-      const showCategoryProducts = showCategoryFlow && Boolean(selectedAudience);
-      const showProductList = ['all', 'spareparts'].includes(activeMainTab) || showCategoryProducts;
+      const isBikeTab = activeMainTab === 'bikes';
+      const isSpareTab = activeMainTab === 'spareparts';
+      const showCategories = (isBikeTab || isSpareTab) && !selectedCategory;
+      const showAudience = isBikeTab && Boolean(selectedCategory);
+      const showBikeProducts = isBikeTab && Boolean(selectedCategory) && Boolean(selectedAudience);
+      const showSpareProducts = isSpareTab && Boolean(selectedCategory);
+      const showProductList = activeMainTab === 'all' || showBikeProducts || showSpareProducts;
 
       categoryGrid.hidden = !showCategories;
-      productToolbar.hidden = !(showProductList || showCategoryFlow);
-      audienceGrid.hidden = !showCategoryFlow;
+      productToolbar.hidden = !(showProductList || showAudience);
+      audienceGrid.hidden = !showAudience;
       productGrid.hidden = !showProductList;
       emptyState.hidden = true;
-      backButton.hidden = !showCategoryFlow;
+      backButton.hidden = !selectedCategory;
       existingItems.forEach(item => { item.hidden = true; });
 
       if (showCategories) {
         renderCategories();
       } else {
-        if (showCategoryFlow) {
+        if (showAudience) {
           renderAudienceChoices();
-          categoryTitle.textContent = categories.find(item => item.id === selectedCategory).label;
+          const category = categories.find(item => item.id === selectedCategory);
+          categoryTitle.textContent = category.label;
+        } else if (showSpareProducts) {
+          const category = spareCategories.find(item => item.id === selectedCategory);
+          categoryTitle.textContent = category.label;
         }
         if (!showProductList) return;
 
         let visibleProducts = products;
-        if (showCategoryProducts) {
+        if (showBikeProducts) {
           const category = categories.find(item => item.id === selectedCategory);
           visibleProducts = products.filter(product => {
             if (product.category !== selectedCategory) return false;
@@ -588,9 +606,8 @@
             return audience === selectedAudience;
           });
           categoryTitle.textContent = `${category.label} — ${selectedAudience === 'adult' ? 'Dewasa' : 'Anak-anak'}`;
-        } else if (activeMainTab === 'spareparts') {
-          visibleProducts = spareParts;
-          categoryTitle.textContent = 'Suku Cadang';
+        } else if (showSpareProducts) {
+          visibleProducts = products.filter(product => product.category === 'spareparts' && product.spareCategory === selectedCategory);
         } else {
           categoryTitle.textContent = 'Semua Produk';
         }
@@ -599,10 +616,12 @@
         categoryProducts.sort((first, second) => (Date.parse(second.dateAdded) || 0) - (Date.parse(first.dateAdded) || 0));
 
         categoryProducts.forEach(product => productGrid.appendChild(createProductCard(product)));
-        if (showCategoryProducts && categoryProducts.length === 0) {
+        if (showBikeProducts && categoryProducts.length === 0) {
           const audienceLabel = selectedAudience === 'adult' ? 'dewasa' : 'anak-anak';
           const category = categories.find(item => item.id === selectedCategory);
           emptyState.textContent = `Sepeda ${audienceLabel} untuk kategori ${category.label} belum tersedia.`;
+        } else if (showSpareProducts && categoryProducts.length === 0) {
+          emptyState.textContent = 'Belum ada produk pada kategori ini.';
         } else {
           emptyState.textContent = 'Segera hadir';
         }
@@ -636,7 +655,6 @@
       const categoryButton = event.target.closest('button[data-category-id]');
       if (!categoryButton) return;
 
-      activeMainTab = 'bikes';
       selectedCategory = categoryButton.dataset.categoryId;
       selectedAudience = null;
       updateMainTabState();

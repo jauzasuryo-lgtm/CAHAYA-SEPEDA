@@ -32,10 +32,19 @@ references of the model type; colours, exact specifications, and stock should be
 confirmed with the shop.
 
 Spare parts:
-All 14 real reference photographs are stored in assets/img/produk/ and copied
+All 14 reference photographs are stored in assets/img/produk/ and copied
 (normalised) to assets/img/katalog/. Per-file source pages, original image URLs,
 authors, licenses, modifications, and checksums are recorded in
 assets/img/produk/asset-sources.json.
+
+Three spare-part card photos were replaced with landscape-oriented images so
+they fill the 4:3 card panel:
+- lampu-depan.webp — "Headlight (bicycle)" by Anton Ehrola, CC BY-SA 4.0,
+  Wikimedia Commons.
+- ban-luar.webp — "Mountain bike tyres from Maxxis, Schwalbe and WTB" by
+  Alextredz, CC BY-SA 4.0, Wikimedia Commons.
+- ban-dalam.webp — Decathlon Indonesia product photo for the 26" Presta inner
+  tube; reuse permission is not confirmed.
 Wikimedia photographs retain their applicable CC BY-SA, CC0, or public-domain terms.
 The mirror photograph is from the official Decathlon Indonesia product page:
 https://www.decathlon.co.id/p/kaca-spion-sepeda-100-btwin-8158024.html

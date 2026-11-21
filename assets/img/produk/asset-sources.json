@@ -679,5 +679,28 @@
     ],
     "format": "WebP quality 90",
     "note": "Salinan ternormalisasi dari 22 foto sepeda dan 14 foto suku cadang yang dipakai galeri. Latar putih, margin dipangkas, skala diseragamkan agar kartu produk konsisten. Berkas asli di assets/img/produk/ dan assets/img/catalog-v3/ tidak diubah."
-  }
+  },
+  "card_image_replacements": [
+    {
+      "file": "assets/img/katalog/lampu-depan.webp",
+      "title": "Headlight (bicycle)",
+      "creator": "Anton Ehrola",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Headlight_(bicycle).jpg"
+    },
+    {
+      "file": "assets/img/katalog/ban-luar.webp",
+      "title": "Mountain bike tyres from Maxxis, Schwalbe and WTB",
+      "creator": "Alextredz",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mountain_bike_tyres_from_maxxis_schwalbe_and_wtb.jpg"
+    },
+    {
+      "file": "assets/img/katalog/ban-dalam.webp",
+      "title": "Ban Dalam 26x1,7/2,2 Pentil Presta 48 mm",
+      "creator": "Decathlon Indonesia",
+      "license": "Reuse permission not confirmed",
+      "source": "https://www.decathlon.co.id/p/ban-dalam-26x1-7-2-2-pentil-presta-48-mm-decathlon-8549113.html"
+    }
+  ]
 }
