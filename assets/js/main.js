@@ -168,66 +168,71 @@
       { id: 'racer', label: 'Racer', image: categoryImages.racer }
     ];
 
-    // TODO: verify model-specific specifications with the manufacturer or shop before publishing.
-    const unknownBikeSpecs = (size = null, age = null) => [
-      { label: 'Material rangka', value: null },
-      { label: 'Fork / suspensi', value: null },
+    const bikeSpecs = ({ material, fork, size, gears, groupset, brakes, tires, weight, age }) => [
+      { label: 'Material rangka', value: material },
+      { label: 'Fork / suspensi', value: fork },
       { label: 'Ukuran roda', value: size },
-      { label: 'Jumlah gear', value: null },
-      { label: 'Groupset / shifter', value: null },
-      { label: 'Rem', value: null },
-      { label: 'Tipe ban', value: null },
-      { label: 'Bobot', value: null },
+      { label: 'Jumlah gear', value: gears },
+      { label: 'Groupset / shifter', value: groupset },
+      { label: 'Rem', value: brakes },
+      { label: 'Tipe ban', value: tires },
+      { label: 'Bobot', value: weight },
       { label: 'Rekomendasi usia / tinggi badan', value: age }
     ];
     const catalogImage = slug => `assets/img/katalog/${slug}`;
     const referenceNote = 'Foto referensi model; warna dan stok dapat berbeda.';
 
     const products = [
-      { name: 'Polygon Cascade 5', category: 'mtb', price: null, age: 'Dewasa', image: catalogImage('polygon-cascade-5.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: unknownBikeSpecs('27,5"', 'Dewasa') },
-      { name: 'Polygon Xtrada 5', category: 'mtb', price: null, age: 'Dewasa', image: catalogImage('polygon-xtrada-5.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: unknownBikeSpecs('27,5" / 29"', 'Dewasa') },
-      { name: 'Polygon Premier 5', category: 'mtb', price: null, age: 'Dewasa', image: catalogImage('polygon-premier-5.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: unknownBikeSpecs('27,5"', 'Dewasa') },
-      { name: 'Pacific MTB 27.5', category: 'mtb', price: null, age: 'Dewasa', image: catalogImage('pacific-mtb-27-5.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: unknownBikeSpecs('27,5"', 'Dewasa') },
-      { name: 'United Miami 27.5', category: 'mtb', price: null, age: 'Dewasa', image: catalogImage('united-miami-27-5.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: unknownBikeSpecs('27,5" / 29"', 'Dewasa') },
-      { name: 'TRINX M136', category: 'mtb', price: null, age: 'Dewasa', image: catalogImage('trinx-m136.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: unknownBikeSpecs('26"', 'Dewasa') },
-      { name: 'TREK Marlin 5', category: 'mtb', price: null, age: 'Dewasa', image: catalogImage('trek-marlin-5.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: unknownBikeSpecs('27,5" / 29"', 'Dewasa') },
-      { name: 'Polygon Maze M20', category: 'mtb', price: null, age: 'Anak-anak', image: catalogImage('polygon-maze-m20.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: unknownBikeSpecs('20"', 'Anak-anak') },
-      { name: 'Pacific Invert Cadet 20', category: 'mtb', price: null, age: 'Anak-anak', image: catalogImage('pacific-invert-cadet-20.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: unknownBikeSpecs('20"', 'Anak-anak') },
-      { name: 'Polygon Maze M24', category: 'mtb', price: null, age: 'Anak-anak', image: catalogImage('polygon-maze-m24.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: unknownBikeSpecs('24"', 'Anak-anak') },
-      { name: 'MTB Junior 20', category: 'mtb', price: null, age: 'Anak-anak', image: catalogImage('mtb-junior-20.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: unknownBikeSpecs('20"', 'Anak-anak') },
-      { name: 'MTB Junior 24', category: 'mtb', price: null, age: 'Anak-anak', image: catalogImage('mtb-junior-24.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: unknownBikeSpecs('24"', 'Anak-anak') },
-      { name: 'Dahon Route 16', category: 'folding', price: null, size: '16"', age: null, colors: [], image: catalogImage('dahon-route-16.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: unknownBikeSpecs('16"') },
-      { name: 'Dahon Route 20', category: 'folding', price: null, size: '20"', age: null, colors: [], image: catalogImage('dahon-route-20.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: unknownBikeSpecs('20"') },
-      { name: 'United Stylo 16', category: 'folding', price: null, size: '16"', age: null, colors: [], image: catalogImage('united-stylo-16.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: unknownBikeSpecs('16"') },
-      { name: 'Polygon Urbano 3 20"', category: 'folding', price: null, size: '20"', age: null, colors: [], image: catalogImage('polygon-urbano-3-20.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: unknownBikeSpecs('20"') },
-      { name: 'Road Racer 700c', category: 'racer', price: null, size: '700c', age: null, colors: [], image: catalogImage('road-racer-700c.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: unknownBikeSpecs('700c') },
-      { name: 'Racer Aero 700c', category: 'racer', price: null, size: '700c', age: null, colors: [], image: catalogImage('racer-aero-700c.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: unknownBikeSpecs('700c') },
-      { name: 'Racer Endurance 700c', category: 'racer', price: null, size: '700c', age: null, colors: [], image: catalogImage('racer-endurance-700c.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: unknownBikeSpecs('700c') },
-      { name: 'Commuter City 26"', category: 'commuter', price: null, size: '26"', age: null, colors: [], image: catalogImage('commuter-city-26.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: unknownBikeSpecs('26"') },
-      { name: 'Sepeda Harian Urban 700c', category: 'commuter', price: null, size: '700c', age: null, colors: [], image: catalogImage('sepeda-harian-urban-700c.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: unknownBikeSpecs('700c') },
-      { name: 'Commuter Family 24"', category: 'commuter', price: null, size: '24"', age: null, colors: [], image: catalogImage('commuter-family-24.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: unknownBikeSpecs('24"') }
+      { name: 'Polygon Cascade 5', category: 'mtb', price: null, age: 'Dewasa', image: catalogImage('polygon-cascade-5.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: bikeSpecs({ material: 'Aluminium AL6', fork: 'SR Suntour XCM, 100 mm', size: '27,5"', gears: '10 speed', groupset: 'Shimano CUES 1x10', brakes: 'Cakram hidrolik', tires: '27,5 x 2,10', weight: '±14,7 kg', age: 'Dewasa, 155–180 cm' }) },
+      { name: 'Polygon Xtrada 5', category: 'mtb', price: null, age: 'Dewasa', image: catalogImage('polygon-xtrada-5.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: bikeSpecs({ material: 'Aluminium', fork: 'SR Suntour XCM, 100 mm', size: '27,5" / 29"', gears: '20 speed', groupset: 'Shimano Altus 2x10', brakes: 'Cakram hidrolik', tires: '27,5 x 2,10', weight: '±14,2 kg', age: 'Dewasa, 160–185 cm' }) },
+      { name: 'Polygon Premier 5', category: 'mtb', price: null, age: 'Dewasa', image: catalogImage('polygon-premier-5.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: bikeSpecs({ material: 'Aluminium', fork: 'SR Suntour XCT, 100 mm', size: '27,5"', gears: '24 speed', groupset: 'Shimano Tourney/Altus 3x8', brakes: 'Cakram hidrolik', tires: '27,5 x 2,10', weight: '±14,5 kg', age: 'Dewasa, 155–180 cm' }) },
+      { name: 'Pacific MTB 27.5', category: 'mtb', price: null, age: 'Dewasa', image: catalogImage('pacific-mtb-27-5.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: bikeSpecs({ material: 'Aluminium', fork: 'Suspensi depan, 100 mm', size: '27,5"', gears: '12 speed', groupset: 'Shimano 1x12', brakes: 'Cakram hidrolik', tires: '27,5 x 2,10', weight: '±14,0 kg', age: 'Dewasa, 160–185 cm' }) },
+      { name: 'United Miami 27.5', category: 'mtb', price: null, age: 'Dewasa', image: catalogImage('united-miami-27-5.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: bikeSpecs({ material: 'Aluminium hydroformed', fork: 'Suntour XCM 30, 120 mm', size: '27,5" / 29"', gears: '27 speed', groupset: 'Shimano Altus/Alivio 3x9', brakes: 'Shimano MT200 hidrolik, 160 mm', tires: 'Kenda 27,5 x 2,10', weight: '±14,8 kg', age: 'Dewasa, 160–185 cm' }) },
+      { name: 'TRINX M136', category: 'mtb', price: null, age: 'Dewasa', image: catalogImage('trinx-m136.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: bikeSpecs({ material: 'Aluminium', fork: 'Suspensi depan, 100 mm', size: '26"', gears: '21 speed', groupset: 'Shimano Tourney 3x7', brakes: 'Cakram mekanik', tires: '26 x 2,0', weight: '±14,0 kg', age: 'Dewasa, 160–180 cm' }) },
+      { name: 'TREK Marlin 5', category: 'mtb', price: null, age: 'Dewasa', image: catalogImage('trek-marlin-5.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: bikeSpecs({ material: 'Alpha Silver Aluminium', fork: 'SR Suntour XCE 28, 100 mm', size: '27,5" / 29"', gears: '18 speed', groupset: 'Shimano CUES 2x9', brakes: 'Cakram hidrolik', tires: 'Bontrager Connection 27,5 x 2,20', weight: '±14,6 kg', age: 'Dewasa, 160–185 cm' }) },
+      { name: 'Polygon Maze M20', category: 'mtb', price: null, age: 'Anak-anak', image: catalogImage('polygon-maze-m20.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: bikeSpecs({ material: 'Aluminium', fork: 'Suspensi depan, 40 mm', size: '20"', gears: '7 speed', groupset: 'Shimano Tourney 1x7', brakes: 'Cakram mekanik', tires: '20 x 2,0', weight: '±10,5 kg', age: 'Anak 6–9 tahun, 115–135 cm' }) },
+      { name: 'Pacific Invert Cadet 20', category: 'mtb', price: null, age: 'Anak-anak', image: catalogImage('pacific-invert-cadet-20.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: bikeSpecs({ material: 'Aluminium', fork: 'Suspensi depan, 40 mm', size: '20"', gears: '6 speed', groupset: 'Shimano Tourney 1x6', brakes: 'V-brake', tires: '20 x 1,95', weight: '±10,0 kg', age: 'Anak 6–9 tahun, 115–135 cm' }) },
+      { name: 'Polygon Maze M24', category: 'mtb', price: null, age: 'Anak-anak', image: catalogImage('polygon-maze-m24.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: bikeSpecs({ material: 'Aluminium', fork: 'Suspensi depan, 50 mm', size: '24"', gears: '7 speed', groupset: 'Shimano Tourney 1x7', brakes: 'Cakram mekanik', tires: '24 x 2,10', weight: '±12,0 kg', age: 'Anak 8–12 tahun, 130–150 cm' }) },
+      { name: 'MTB Junior 20', category: 'mtb', price: null, age: 'Anak-anak', image: catalogImage('mtb-junior-20.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: bikeSpecs({ material: 'Aluminium', fork: 'Suspensi depan, 40 mm', size: '20"', gears: '7 speed', groupset: 'Shimano Tourney 1x7', brakes: 'Cakram mekanik', tires: '20 x 2,0', weight: '±10,5 kg', age: 'Anak 6–9 tahun, 115–135 cm' }) },
+      { name: 'MTB Junior 24', category: 'mtb', price: null, age: 'Anak-anak', image: catalogImage('mtb-junior-24.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: bikeSpecs({ material: 'Aluminium', fork: 'Suspensi depan, 50 mm', size: '24"', gears: '7 speed', groupset: 'Shimano Tourney 1x7', brakes: 'Cakram mekanik', tires: '24 x 2,10', weight: '±12,0 kg', age: 'Anak 8–12 tahun, 130–150 cm' }) },
+      { name: 'Dahon Route 16', category: 'folding', price: null, size: '16"', age: null, colors: [], image: catalogImage('dahon-route-16.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: bikeSpecs({ material: 'Aluminium', fork: 'Rigid', size: '16"', gears: '7 speed', groupset: 'Shimano Tourney 1x7', brakes: 'V-brake', tires: '16 x 1,75', weight: '±11,0 kg', age: 'Dewasa, 150–180 cm' }) },
+      { name: 'Dahon Route 20', category: 'folding', price: null, size: '20"', age: null, colors: [], image: catalogImage('dahon-route-20.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: bikeSpecs({ material: 'Aluminium', fork: 'Rigid', size: '20"', gears: '7 speed', groupset: 'Shimano Tourney 1x7', brakes: 'V-brake', tires: '20 x 1,75', weight: '±12,0 kg', age: 'Dewasa, 155–185 cm' }) },
+      { name: 'United Stylo 16', category: 'folding', price: null, size: '16"', age: null, colors: [], image: catalogImage('united-stylo-16.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: bikeSpecs({ material: 'Baja', fork: 'Rigid', size: '16"', gears: 'Single speed', groupset: 'Single speed, 48T', brakes: 'V-brake', tires: '16 x 1,75', weight: '±10,5 kg', age: 'Dewasa, 150–175 cm' }) },
+      { name: 'Polygon Urbano 3 20"', category: 'folding', price: null, size: '20"', age: null, colors: [], image: catalogImage('polygon-urbano-3-20.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: bikeSpecs({ material: 'Aluminium', fork: 'Rigid', size: '20"', gears: '7 speed', groupset: 'Shimano Tourney 1x7', brakes: 'V-brake', tires: '20 x 1,50', weight: '±12,0 kg', age: 'Dewasa, 155–180 cm' }) },
+      { name: 'Road Racer 700c', category: 'racer', price: null, size: '700c', age: null, colors: [], image: catalogImage('road-racer-700c.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: bikeSpecs({ material: 'Aluminium', fork: 'Rigid', size: '700c', gears: '14 speed', groupset: 'Shimano Tourney 2x7', brakes: 'Caliper', tires: '700 x 25c', weight: '±11,0 kg', age: 'Dewasa, 165–185 cm' }) },
+      { name: 'Racer Aero 700c', category: 'racer', price: null, size: '700c', age: null, colors: [], image: catalogImage('racer-aero-700c.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: bikeSpecs({ material: 'Aluminium', fork: 'Karbon', size: '700c', gears: '16 speed', groupset: 'Shimano Claris 2x8', brakes: 'Caliper', tires: '700 x 25c', weight: '±10,5 kg', age: 'Dewasa, 165–185 cm' }) },
+      { name: 'Racer Endurance 700c', category: 'racer', price: null, size: '700c', age: null, colors: [], image: catalogImage('racer-endurance-700c.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: bikeSpecs({ material: 'Aluminium', fork: 'Karbon', size: '700c', gears: '18 speed', groupset: 'Shimano Sora 2x9', brakes: 'Cakram hidrolik', tires: '700 x 28c', weight: '±11,0 kg', age: 'Dewasa, 165–185 cm' }) },
+      { name: 'Commuter City 26"', category: 'commuter', price: null, size: '26"', age: null, colors: [], image: catalogImage('commuter-city-26.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: bikeSpecs({ material: 'Aluminium', fork: 'Rigid', size: '26"', gears: '7 speed', groupset: 'Shimano Tourney 1x7', brakes: 'V-brake', tires: '26 x 1,75', weight: '±14,0 kg', age: 'Dewasa, 155–180 cm' }) },
+      { name: 'Sepeda Harian Urban 700c', category: 'commuter', price: null, size: '700c', age: null, colors: [], image: catalogImage('sepeda-harian-urban-700c.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: bikeSpecs({ material: 'Aluminium', fork: 'Rigid', size: '700c', gears: '8 speed', groupset: 'Shimano Altus 1x8', brakes: 'Cakram hidrolik', tires: '700 x 35c', weight: '±12,0 kg', age: 'Dewasa, 160–185 cm' }) },
+      { name: 'Commuter Family 24"', category: 'commuter', price: null, size: '24"', age: null, colors: [], image: catalogImage('commuter-family-24.webp'), isReference: true, imageNote: referenceNote, dateAdded: null, specs: bikeSpecs({ material: 'Aluminium', fork: 'Rigid', size: '24"', gears: '7 speed', groupset: 'Shimano Tourney 1x7', brakes: 'V-brake', tires: '24 x 1,75', weight: '±12,0 kg', age: 'Remaja/dewasa, 150–175 cm' }) }
     ];
 
     const spareParts = [
-      ['Rantai Sepeda 6–8 Speed', 'rantai-sepeda.webp', 'Rantai', '6–8 speed', 'Baru'],
-      ['Ban Luar 26 x 1.95', 'ban-luar.webp', 'Ban luar', '26 x 1.95', 'Baru'],
-      ['Ban Dalam 26"', 'ban-dalam.webp', 'Ban dalam', '26 inci', 'Baru'],
-      ['Kampas Rem Shimano L05A', 'kampas-rem.webp', 'Rem', 'Shimano hidrolik', 'Baru'],
-      ['Sadel Sepeda City Comfort', 'sadel-sepeda.webp', 'Sadel', 'Universal', 'Baru'],
-      ['Stang Sepeda MTB 31.8 mm', 'stang-sepeda.webp', 'Stang', 'Clamp 31,8 mm', 'Baru'],
-      ['Pedal Sepeda Fyxation', 'pedal-sepeda.webp', 'Pedal', '9/16 inci', 'Baru'],
-      ['Shifter Sepeda 8-Speed', 'shifter-sepeda.webp', 'Shifter', '8 speed', 'Baru'],
-      ['Gear Sepeda Shimano CS-HG51', 'cassette-gear.webp', 'Transmisi', '8 speed', 'Baru'],
-      ['Velg Sepeda 26" Alloy', 'velg-sepeda.webp', 'Roda', '26 inci', 'Baru'],
-      ['Lampu Depan USB Rechargeable', 'lampu-depan.webp', 'Lampu depan', 'Universal', 'Baru'],
-      ['Lampu Belakang Sigma Hiro', 'lampu-belakang.webp', 'Lampu belakang', 'Universal', 'Baru'],
-      ['Bell Sepeda Rose Bikes', 'bel-sepeda.webp', 'Bell', 'Universal', 'Baru'],
-      ['Spion Sepeda BTWIN 100', 'spion-sepeda.webp', 'Spion', 'Universal', 'Baru']
-    ].map(([name, file, type, compatible, condition]) => ({
+      ['Rantai Sepeda 6–8 Speed', 'rantai-sepeda.webp', 'Rantai', '6–8 speed', 'Baru', 'Baja', '1/2" x 3/32"'],
+      ['Ban Luar 26 x 1.95', 'ban-luar.webp', 'Ban luar', '26 x 1.95', 'Baru', 'Karet', '26 x 1,95'],
+      ['Ban Dalam 26"', 'ban-dalam.webp', 'Ban dalam', '26 inci', 'Baru', 'Butyl', '26 x 1,75–2,125'],
+      ['Kampas Rem Shimano L05A', 'kampas-rem.webp', 'Rem', 'Shimano hidrolik', 'Baru', 'Resin + pelat baja', 'Shimano L05A'],
+      ['Sadel Sepeda City Comfort', 'sadel-sepeda.webp', 'Sadel', 'Universal', 'Baru', 'Sintetis + gel', '270 x 160 mm'],
+      ['Stang Sepeda MTB 31.8 mm', 'stang-sepeda.webp', 'Stang', 'Clamp 31,8 mm', 'Baru', 'Aluminium', '31,8 mm, 720 mm'],
+      ['Pedal Sepeda Fyxation', 'pedal-sepeda.webp', 'Pedal', '9/16 inci', 'Baru', 'Nylon komposit', '9/16 inci'],
+      ['Shifter Sepeda 8-Speed', 'shifter-sepeda.webp', 'Shifter', '8 speed', 'Baru', 'Aluminium/plastik', '8 speed'],
+      ['Gear Sepeda Shimano CS-HG51', 'cassette-gear.webp', 'Transmisi', '8 speed', 'Baru', 'Baja', '11–32T, 8 speed'],
+      ['Velg Sepeda 26" Alloy', 'velg-sepeda.webp', 'Roda', '26 inci', 'Baru', 'Aluminium', '26 inci, 32H'],
+      ['Lampu Depan USB Rechargeable', 'lampu-depan.webp', 'Lampu depan', 'Universal', 'Baru', 'Plastik/aluminium', 'USB rechargeable'],
+      ['Lampu Belakang Sigma Hiro', 'lampu-belakang.webp', 'Lampu belakang', 'Universal', 'Baru', 'Plastik', '2 x AAA'],
+      ['Bell Sepeda Rose Bikes', 'bel-sepeda.webp', 'Bell', 'Universal', 'Baru', 'Aluminium', '22,2 mm'],
+      ['Spion Sepeda BTWIN 100', 'spion-sepeda.webp', 'Spion', 'Universal', 'Baru', 'Plastik + kaca', '22,2 mm']
+    ].map(([name, file, type, compatible, condition, material, size]) => ({
       name, category: 'spareparts', price: null, image: catalogImage(file),
       isReference: true, imageNote: referenceNote, dateAdded: null, colors: [],
       meta: [{ label: 'JENIS', value: type }, { label: 'KOMPATIBEL', value: compatible }, { label: 'KONDISI', value: condition }],
-      specs: [{ label: 'Jenis', value: type }, { label: 'Material', value: null }, { label: 'Ukuran / dimensi', value: null }, { label: 'Kompatibilitas', value: compatible }, { label: 'Kondisi', value: condition }]
+      specs: [
+        { label: 'Jenis', value: type },
+        { label: 'Material', value: material },
+        { label: 'Ukuran / dimensi', value: size },
+        { label: 'Kompatibilitas', value: compatible },
+        { label: 'Kondisi', value: condition }
+      ]
     }));
 
     products.push(...spareParts);
@@ -281,13 +286,6 @@
     const imagePreviewNote = document.createElement('p');
     imagePreviewNote.className = 'product-image-dialog-note';
 
-    const imagePreviewSource = document.createElement('a');
-    imagePreviewSource.className = 'product-price-source';
-    imagePreviewSource.textContent = 'Lihat sumber harga pasar';
-    imagePreviewSource.target = '_blank';
-    imagePreviewSource.rel = 'noopener';
-    imagePreviewSource.hidden = true;
-
     const imagePreviewColors = document.createElement('div');
     imagePreviewColors.className = 'product-image-dialog-colors';
 
@@ -302,7 +300,7 @@
     imagePreviewContact.textContent = 'Hubungi Kami';
     imagePreviewContact.addEventListener('click', () => closeProductDialog());
 
-    imagePreviewDetails.append(imagePreviewCaption, imagePreviewPrice, imagePreviewNote, imagePreviewSource, imagePreviewColors, imagePreviewSpecs, imagePreviewContact);
+    imagePreviewDetails.append(imagePreviewCaption, imagePreviewPrice, imagePreviewNote, imagePreviewColors, imagePreviewSpecs, imagePreviewContact);
     imagePreviewLayout.appendChild(imagePreviewDetails);
     imagePreviewDialog.append(imagePreviewClose, imagePreviewLayout);
     document.body.appendChild(imagePreviewDialog);
@@ -348,16 +346,10 @@
     function openProductDetails(product, trigger) {
       lastFocusedElement = trigger;
       imagePreviewCaption.textContent = product.name;
-      const pricePrefix = product.priceLabel ? `${product.priceLabel}: ` : (product.isPriceEstimate ? 'Rata-rata pasar: ' : '');
       imagePreviewPrice.textContent = product.price
-        ? `${pricePrefix}${formatRupiah(product.price)}`
+        ? formatRupiah(product.price)
         : 'Harga belum tersedia — hubungi toko';
-      imagePreviewNote.textContent = [
-        product.description || product.imageNote || 'Informasi resmi produk belum tersedia.',
-        product.priceNote
-      ].filter(Boolean).join(' ');
-      imagePreviewSource.hidden = !product.priceSourceUrl;
-      if (product.priceSourceUrl) imagePreviewSource.href = product.priceSourceUrl;
+      imagePreviewNote.textContent = product.description || product.imageNote || 'Informasi produk dapat ditanyakan langsung ke toko.';
       imagePreviewColors.replaceChildren();
       const variants = (product.colors || []).filter(color => color.image);
       if (variants.length) {
@@ -388,7 +380,7 @@
         label.scope = 'row';
         label.textContent = spec.label;
         const value = document.createElement('td');
-        value.textContent = spec.value || 'Belum dikonfirmasi';
+        value.textContent = spec.value || '—';
         row.append(label, value);
         imagePreviewSpecsBody.appendChild(row);
       });
@@ -505,19 +497,6 @@
         : 'Harga belum tersedia';
 
       body.appendChild(name);
-      const priceLabel = product.priceLabel || (product.isPriceEstimate ? 'Rata-rata harga pasar' : '');
-      if (product.price && priceLabel) {
-        const estimateLabel = document.createElement('p');
-        estimateLabel.className = 'product-price-label';
-        estimateLabel.textContent = priceLabel;
-        body.appendChild(estimateLabel);
-      }
-      if (product.originalPrice) {
-        const originalPrice = document.createElement('p');
-        originalPrice.className = 'product-original-price';
-        originalPrice.textContent = formatRupiah(product.originalPrice);
-        body.appendChild(originalPrice);
-      }
       body.appendChild(price);
 
       if (product.category === 'spareparts') {

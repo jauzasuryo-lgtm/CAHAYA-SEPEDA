@@ -45,8 +45,8 @@ The visitor-facing kredit-foto.html attribution page is linked from the gallery.
 Prices:
 Card prices are market averages collected online in November 2026 from brand
 websites (United Bike, Decathlon Indonesia), a Polygon price article, and
-marketplace listings. Each product dialog shows the price range and a source link.
-Prices are estimates and must be confirmed with the shop before publishing.
+marketplace listings. Prices are shown as single values without notes or source
+links on the visitor-facing page. Confirm with the shop before publishing.
 
 Inventory availability and model-specific specifications remain unconfirmed.
 The project owner should confirm rights to the original bicycle photos before
