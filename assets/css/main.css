@@ -1895,8 +1895,10 @@ section,
 }
 
 .product-image-dialog {
-  position: relative;
+  position: fixed;
+  inset: 0;
   width: min(92vw, 1060px);
+  height: fit-content;
   max-width: calc(100vw - 32px);
   max-height: calc(100dvh - 32px);
   overflow: auto;

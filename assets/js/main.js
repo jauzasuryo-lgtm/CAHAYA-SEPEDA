@@ -260,6 +260,7 @@
     let selectedCategory = null;
     let selectedAudience = null;
     let lastFocusedElement = null;
+    let productDialogScroll = null;
     const imagePreviewDialog = document.createElement('dialog');
     imagePreviewDialog.className = 'product-image-dialog';
     imagePreviewDialog.setAttribute('aria-labelledby', 'product-dialog-title');
@@ -326,7 +327,11 @@
     function closeProductDialog() {
       if (!imagePreviewDialog.open) return;
       imagePreviewDialog.close();
-      if (lastFocusedElement && lastFocusedElement.isConnected) lastFocusedElement.focus();
+      if (productDialogScroll) {
+        window.scrollTo(productDialogScroll.x, productDialogScroll.y);
+        productDialogScroll = null;
+      }
+      if (lastFocusedElement && lastFocusedElement.isConnected) lastFocusedElement.focus({ preventScroll: true });
     }
 
     function trapProductDialogFocus(event) {
@@ -385,8 +390,10 @@
         imagePreviewSpecsBody.appendChild(row);
       });
 
+      productDialogScroll = { x: window.scrollX, y: window.scrollY };
       imagePreviewDialog.showModal();
-      imagePreviewClose.focus();
+      window.scrollTo(productDialogScroll.x, productDialogScroll.y);
+      imagePreviewClose.focus({ preventScroll: true });
     }
 
     function createCategoryCard(category) {
